@@ -1,6 +1,6 @@
 name: ClashX
 
-on:
+"on":
   push:
     branches: [ main, master ]
     tags: [ v* ]
@@ -9,6 +9,9 @@ on:
   workflow_dispatch:
     inputs:
       logLevel:
+        description: 'Log level'
+        required: false
+        default: 'info'
 
 jobs:
   build:
